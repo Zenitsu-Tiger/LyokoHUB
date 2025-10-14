@@ -16,7 +16,7 @@ class RoleController {
 
     // 3.返回结果
     ctx.body = {
-      code: 0,
+      code: 200,
       message: "创建角色成功",
       data: result
     };
@@ -73,7 +73,7 @@ class RoleController {
     }
     const [total] = (await roleService.getRoleTotalCount()) as totalType[];
     ctx.body = {
-      code: 0,
+      code: 200,
       message: "获取角色列表",
       data: {
         list: result,
@@ -90,7 +90,7 @@ class RoleController {
 
     // 3.返回结果
     ctx.body = {
-      code: 0,
+      code: 200,
       message: "分配权限成功~"
     };
   }
@@ -108,7 +108,7 @@ class RoleController {
     }
     // 3.返回结果
     ctx.body = {
-      code: 0,
+      code: 200,
       data: result,
       message: "查询成功~"
     };
@@ -121,7 +121,7 @@ class RoleController {
     await roleService.assignUser(Number(id), Number(userId));
     // 3.返回结果
     ctx.body = {
-      code: 0,
+      code: 200,
       message: "分配权限成功~"
     };
   }

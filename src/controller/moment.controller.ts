@@ -26,7 +26,7 @@ class MomentController {
     // 3.将动态相关的数据插入到数据库
     const result = await momentService.create(content, id);
     ctx.body = {
-      code: 0,
+      code: 200,
       message: "创建动态成功",
       data: result
     };
@@ -39,7 +39,7 @@ class MomentController {
 
     // 返回数据
     ctx.body = {
-      code: 0,
+      code: 200,
       data: result
     };
   }
@@ -52,7 +52,7 @@ class MomentController {
     // 3.返回数据
     if (Array.isArray(result) && !!result.length) {
       ctx.body = {
-        code: 0,
+        code: 200,
         data: Array.isArray(result) ? result[0] : result
       };
     } else {
@@ -67,7 +67,7 @@ class MomentController {
     // 3.执行数据库操作
     const result = await momentService.update(content, momentId);
     ctx.body = {
-      code: 0,
+      code: 200,
       message: "修改动态成功",
       data: result
     };
@@ -78,7 +78,7 @@ class MomentController {
     // 2.执行数据库操作
     const result = await momentService.removeDetail(momentId);
     ctx.body = {
-      code: 0,
+      code: 200,
       message: "删除动态成功",
       data: result
     };
@@ -100,7 +100,7 @@ class MomentController {
         }
       }
       ctx.body = {
-        code: 0,
+        code: 200,
         message: "为动态添加标签成功"
       };
     } catch (error) {

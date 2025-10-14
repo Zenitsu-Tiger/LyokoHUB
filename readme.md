@@ -272,7 +272,7 @@ class LoginController {
         algorithm: "RS256"
       });
       // 3.返回用户信息
-      ctx.body = { code: 0, data: { id, name, token } };
+      ctx.body = { code: 200, data: { id, name, token } };
     } catch (err) {
       console.log(err);
     }

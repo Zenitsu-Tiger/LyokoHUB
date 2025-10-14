@@ -22,7 +22,7 @@ class CommentController {
     //   2.操作数据库,将数据进行存储
     const result = await commentService.create(content, momentId, id);
     ctx.body = {
-      code: 0,
+      code: 200,
       message: "评论成功",
       data: result
     };
@@ -36,7 +36,7 @@ class CommentController {
     //   2.操作数据库,将数据进行存储
     const result = await commentService.reply(content, momentId, commentId, id);
     ctx.body = {
-      code: 0,
+      code: 200,
       message: "回复评论成功",
       data: result
     };

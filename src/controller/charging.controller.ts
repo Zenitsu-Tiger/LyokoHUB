@@ -24,7 +24,7 @@ class ChargingController {
     const result = await chargingService.create(chargingData, path);
     // 3.返回结果
     ctx.body = {
-      code: 0,
+      code: 200,
       message: "创建成功",
       data: result
     };
@@ -35,7 +35,7 @@ class ChargingController {
     const chargingId = ctx.params.chargingId;
     const result = await chargingService.delete(chargingId, path);
     ctx.body = {
-      code: 0,
+      code: 200,
       message: "删除成功",
       data: result
     };
@@ -47,7 +47,7 @@ class ChargingController {
     const chargingData = ctx.request.body as pilesType;
     const result = await chargingService.update(chargingData, chargingId, path);
     ctx.body = {
-      code: 0,
+      code: 200,
       message: "更新成功",
       data: result
     };
@@ -57,7 +57,7 @@ class ChargingController {
 
     const result = await chargingService.getwholeChargingInfo(path);
     ctx.body = {
-      code: 0,
+      code: 200,
       message: "查询成功",
       data: result
     };
@@ -68,7 +68,7 @@ class ChargingController {
     const chargingId = ctx.params.chargingId;
     const result = await chargingService.getChargingInfo(chargingId, path);
     ctx.body = {
-      code: 0,
+      code: 200,
       message: "查询成功",
       data: result
     };
@@ -80,7 +80,7 @@ class ChargingController {
 
     // 3.返回结果
     ctx.body = {
-      code: 0,
+      code: 200,
       message: "批量创建成功",
       data: result
     };
@@ -92,7 +92,7 @@ class ChargingController {
 
     // 3.返回结果
     ctx.body = {
-      code: 0,
+      code: 200,
       message: "批量创建数量成功",
       data: result
     };
@@ -103,7 +103,7 @@ class ChargingController {
     const { month, name, value } = ctx.request.body as processMonitoringType;
     const result = await chargingService.monitorUpdate(name, month, value);
     ctx.body = {
-      code: 0,
+      code: 200,
       message: "更新成功",
       data: result
     };
@@ -111,7 +111,7 @@ class ChargingController {
   async getwholeMonitorInfo(ctx: Context) {
     const result = await chargingService.getwholeMonitorInfo();
     ctx.body = {
-      code: 0,
+      code: 200,
       message: "查询成功",
       data: result
     };
@@ -121,7 +121,7 @@ class ChargingController {
 
     const result = await chargingService.getMonitorInfo(name, month);
     ctx.body = {
-      code: 0,
+      code: 200,
       message: "查询成功",
       data: result
     };
@@ -132,7 +132,7 @@ class ChargingController {
 
     // 3.返回结果
     ctx.body = {
-      code: 0,
+      code: 200,
       message: "批量创建成功",
       data: result
     };
@@ -142,7 +142,7 @@ class ChargingController {
     const { id, value } = ctx.request.body as StatisticsType;
     const result = await chargingService.statisticsUpdate(id, value);
     ctx.body = {
-      code: 0,
+      code: 200,
       message: "更新成功",
       data: result
     };
@@ -150,7 +150,7 @@ class ChargingController {
   async getwholeStatisticsInfo(ctx: Context) {
     const result = await chargingService.getwholeStatisticsInfo();
     ctx.body = {
-      code: 0,
+      code: 200,
       message: "查询成功",
       data: result
     };
@@ -159,7 +159,7 @@ class ChargingController {
     const id = ctx.params.id;
     const result = await chargingService.getStatisticsInfo(id);
     ctx.body = {
-      code: 0,
+      code: 200,
       message: "查询成功",
       data: result
     };
@@ -170,7 +170,7 @@ class ChargingController {
 
     // 3.返回结果
     ctx.body = {
-      code: 0,
+      code: 200,
       message: "批量创建成功",
       data: result
     };

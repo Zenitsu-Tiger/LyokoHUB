@@ -10,7 +10,7 @@ class LabelController {
 
     // 3.返回结果
     ctx.body = {
-      code: 0,
+      code: 200,
       message: "创建标签成功",
       data: result
     };
@@ -22,7 +22,7 @@ class LabelController {
     const [result] = await labelService.queryList(offset, size);
     // 返回数据
     ctx.body = {
-      code: 0,
+      code: 200,
       data: result
     };
   }

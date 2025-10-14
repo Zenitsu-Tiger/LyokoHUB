@@ -23,7 +23,7 @@ class MenuController {
     await roleService.updateMenu(Number(roles[0].roleId), Number(createResult[0].id));
 
     ctx.body = {
-      code: 0,
+      code: 200,
       message: "创建菜单成功",
       data: result
     };
@@ -53,7 +53,7 @@ class MenuController {
     }
     const result = await menuService.delete(menuId);
     ctx.body = {
-      code: 0,
+      code: 200,
       message: "删除菜单成功",
       data: result
     };
@@ -61,7 +61,7 @@ class MenuController {
   async list(ctx: Context) {
     const result = (await menuService.wholeMenu()) as menuType[];
     ctx.body = {
-      code: 0,
+      code: 200,
       message: "获取完整的菜单~",
       data: {
         list: result

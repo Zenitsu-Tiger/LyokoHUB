@@ -16,7 +16,7 @@ class FileController {
         await userService.updateUserAvatar(avatar_url, id);
         // 3.返回结果
         ctx.body = {
-          code: 0,
+          code: 200,
           message: "文件上传成功",
           data: avatar_url
         };

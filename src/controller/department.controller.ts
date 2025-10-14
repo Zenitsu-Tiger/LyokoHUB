@@ -12,7 +12,7 @@ class DepartmentController {
 
     // 3.返回结果
     ctx.body = {
-      code: 0,
+      code: 200,
       message: "创建部门成功",
       data: result
     };
@@ -24,7 +24,7 @@ class DepartmentController {
     }
     const result = await departmentService.delete(departmentId);
     ctx.body = {
-      code: 0,
+      code: 200,
       message: "删除部门成功",
       data: result
     };
@@ -37,7 +37,7 @@ class DepartmentController {
     const department = ctx.request.body as departmentType;
     const result = await departmentService.updateDepartment(department, departmentId);
     ctx.body = {
-      code: 0,
+      code: 200,
       message: "更新部门成功",
       data: result
     };
@@ -47,7 +47,7 @@ class DepartmentController {
     const [total] = (await departmentService.getMenuTotalCount()) as totalType[];
 
     ctx.body = {
-      code: 0,
+      code: 200,
       message: "查询成功",
       data: {
         list: result,
@@ -59,7 +59,7 @@ class DepartmentController {
     const departmentId = ctx.params.departmentId;
     const result = await departmentService.getDepartmentInfo(departmentId);
     ctx.body = {
-      code: 0,
+      code: 200,
       message: "查询成功",
       data: result
     };
